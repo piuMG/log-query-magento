@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Framework\DB\LoggerInterface" type="Magestore\DebugCustomization\DB\Logger\File"/>
+    <type name="Magestore\DebugCustomization\DB\Logger\File">
+        <arguments>
+            <argument name="loggerAlias" xsi:type="boolean">true</argument>
+            <argument name="logAllQueries" xsi:type="boolean">true</argument>
+<!--            <argument name="debugFile" xsi:type="string">debug/debug-save-storepickup.log</argument>-->
+            <argument name="logQueryTime" xsi:type="boolean">true</argument>
+            <argument name="logCallStack" xsi:type="boolean">true</argument>
+        </arguments>
+    </type>
+</config>
